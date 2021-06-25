@@ -33,3 +33,11 @@ This renames your waypoint "MyNewBase" to "ABetterName". <br>
 After some serious base renovations the entrance of your base has moved, so you want to change the coordinates stored in your waypoint: <br>
 `/editwaypoint ABetterName position self`
 That changes the coordinates of the waypoint "ABetterName" to where you are currently standing.
+
+## To-do
+- Add direction bossbar to travel
+- Expand README and documentation
+- Add player friend system
+- Allow player as travel destination
+- Clean-up command code
+- Set up a spigot plugin page
