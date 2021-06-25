@@ -1,0 +1,78 @@
+main: easytravel.Main
+name: EasyTravel
+description: Allows for easy management of coordinates and easier travelling
+version: 1.4.0
+api-version: 1.14
+prefix: EasyTravel
+
+commands:
+  Waypoint:
+    description: See your waypoint
+    usage: /waypoint <name of the waypoint>
+    aliases: [wp]
+  AddWaypoint:
+    description: Add a new waypoint
+    usage: /addwaypoint <waypointname> <x> <y> <z> or /addwaypoint <waypointname> if you want to use your current location
+    aliases: [addwp]
+  Waypoints:
+    description: Shows you all your waypoints
+    usage: /waypoints
+    aliases: [wps]
+  DeleteWaypoint:
+    description: Delete one of your waypoints
+    usage: /deletewaypoint <waypointname> confirm
+    aliases: [delwaypoint, delwp, dwp]
+  EditWaypoint:
+    description: Change the name and coordinates of an already existing waypoint
+    usage: /editwaypoint [name | position] [new waypoint name | <x> <y> <z> or "self" to set the position to your current location]
+    aliases: [editwp]
+  PublicWaypoint:
+    description: Displays a public waypoint specified by the name
+    usage: /publicwaypoint <name of the waypoint>
+    aliases: [pubwaypoint, pwaypoint, pubwp, pwp]
+  PublicWaypoints:
+    description: Shows you all public waypoints
+    usage: /publicwaypoints
+    aliases: [publicwps, pubwps, pwps]
+  AddPublicWaypoint:
+    description: Add a new public waypoint which everybody can see
+    usage: /addpublicwaypoint <waypointname> <x> <y> <z> or /addpublicwaypoint <waypointname> if you want to use your current location
+    aliases: [addpublicwp, addpubwp]
+  DeletePublicWaypoint:
+    description: Delete a public waypoint you have created
+    usage: /deletepublicwaypoint <waypointname> confirm
+    aliases: [deletepublicwp, deletepubwp]
+  EditPublicWaypoint:
+    description: Change the name and coordinates of an already existing public waypoint
+    usage: /editpublicwaypoint [name | position] [new waypoint name | <x> <y> <z> or "self" to set the position to your current location]
+    aliases: [editpublicwp, editpubwp]
+  Travel:
+    description: See if and where you're currently travelling and stop the travel
+    usage: /travel [stop]
+  NewTravel:
+    description: Start a new travel to a waypoint or to coordinates
+    usage: /newtravel [private | public | coords] [waypoint name | <x> <y> <z>]
+
+permissions:
+  easytravel.default.privatewaypoints:
+    description: Gives access to all commands for private waypoints a normal user needs
+    children:
+      easytravel.waypoint.private.see: true
+      easytravel.waypoint.private.add: true
+      easytravel.waypoint.private.waypoints: true
+      easytravel.waypoints.private.edit: true
+      easytravel.waypoint.private.delete: true
+    default: true
+  easytravel.default.publicwaypoints:
+    description: Gives access to all commands for public waypoints a normal user needs
+    children:
+      easytravel.waypoint.public.see: true
+      easytravel.waypoint.public.waypoints: true
+      easytravel.waypoint.public.add: true
+      easytravel.waypoint.public.delete: true
+      easytravel.waypoint.public.edit: true
+    default: true
+  easytravel.travel:
+    description: Gives access to all commands a normal user needs to use the travel functionality
+    default: true
+
