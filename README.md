@@ -39,5 +39,6 @@ That changes the coordinates of the waypoint "ABetterName" to where you are curr
 - Expand README and documentation
 - Add player friend system
 - Allow player as travel destination
+- Add config file
 - Clean-up command code
 - Set up a spigot plugin page
