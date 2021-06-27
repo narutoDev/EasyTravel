@@ -118,7 +118,7 @@ public class ScoreboardUpdater extends BukkitRunnable {
 		// seconds
 		int seconds = (int) timeTraveled;
 
-		scoreName = ChatColor.translateAlternateColorCodes('&', "&9Time traveled&r&7:");
+		scoreName = ChatColor.translateAlternateColorCodes('&', "&9Time traveled:");
 		score = obj.getScore(scoreName);
 		score.setScore(2);
 
