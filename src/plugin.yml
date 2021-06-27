@@ -52,6 +52,8 @@ commands:
   NewTravel:
     description: Start a new travel to a waypoint or to coordinates
     usage: /newtravel [private | public | coords] [waypoint name | <x> <y> <z>]
+  BossbarTest:
+    description: Test for bossbar calculations DEBUG COMMAND
 
 permissions:
   easytravel.default.privatewaypoints:

@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import easytravel.command.BossbarTestCommand;
 import easytravel.command.travel.NewTravelCommand;
 import easytravel.command.travel.TravelCommand;
 import easytravel.command.waypoint.AddPublicWaypointCommand;
@@ -84,6 +85,9 @@ public class Main extends JavaPlugin {
 		// travel commands
 		this.getCommand("Travel").setExecutor(new TravelCommand());
 		this.getCommand("NewTravel").setExecutor(new NewTravelCommand());
+
+		// debug commands
+		this.getCommand("BossbarTest").setExecutor(new BossbarTestCommand());
 	}
 
 	private void registerListeners() {
