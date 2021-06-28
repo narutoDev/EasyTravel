@@ -2,6 +2,7 @@ package easytravel.travel;
 
 import java.util.UUID;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
@@ -17,6 +18,7 @@ public class Travel {
 	private String destinationName;
 
 	private ScoreboardUpdater scoreboardUpdater;
+	private BossbarUpdater bossbarUpdater;
 
 	public Travel(Player p, Point3D destinationPoint, Point3D startingPoint, String destinationName) {
 		this.traveler = p;
@@ -25,6 +27,7 @@ public class Travel {
 		this.destinationName = destinationName;
 
 		this.scoreboardUpdater = new ScoreboardUpdater(this);
+		this.bossbarUpdater = new BossbarUpdater(this);
 
 		this.registerToManager();
 		this.startUpdaters();
@@ -37,10 +40,13 @@ public class Travel {
 
 	public void startUpdaters() {
 		scoreboardUpdater.runTaskTimer(Main.getPlugin(), 1, Settings.TRAVEL_SCOREBOARD_UPDATE_DELAY);
+		this.bossbarUpdater.startUpdater();
 	}
 
 	public void stopUpdaters() {
 		scoreboardUpdater.cancel();
+		this.bossbarUpdater.stopUpdater();
+		traveler.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
 	}
 
 	public void sendStartMessage() {

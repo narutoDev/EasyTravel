@@ -36,7 +36,7 @@ public class ScoreboardUpdater extends BukkitRunnable {
 		if (p == null) {
 			return;
 		}
-		
+
 		ScoreboardManager manager = Bukkit.getScoreboardManager();
 		Scoreboard board = manager.getNewScoreboard();
 		String title = ChatColor.translateAlternateColorCodes('&', "&6&lEasyTravel");
@@ -48,7 +48,7 @@ public class ScoreboardUpdater extends BukkitRunnable {
 		String scoreName = ChatColor.translateAlternateColorCodes('&', line);
 		Score score = obj.getScore(scoreName);
 		score.setScore(15);
-		
+
 		// destination
 		line = "&9Destination:";
 		scoreName = ChatColor.translateAlternateColorCodes('&', line);
@@ -58,7 +58,7 @@ public class ScoreboardUpdater extends BukkitRunnable {
 		scoreName = ChatColor.translateAlternateColorCodes('&', line);
 		score = obj.getScore(scoreName);
 		score.setScore(13);
-		
+
 		score = obj.getScore("    ");
 		score.setScore(12);
 
@@ -71,7 +71,7 @@ public class ScoreboardUpdater extends BukkitRunnable {
 		scoreName = ChatColor.translateAlternateColorCodes('&', line);
 		score = obj.getScore(scoreName);
 		score.setScore(10);
-		
+
 		score = obj.getScore("   ");
 		score.setScore(9);
 
@@ -85,7 +85,7 @@ public class ScoreboardUpdater extends BukkitRunnable {
 		scoreName = ChatColor.translateAlternateColorCodes('&', line);
 		score = obj.getScore(scoreName);
 		score.setScore(7);
-		
+
 		score = obj.getScore("  ");
 		score.setScore(6);
 
@@ -99,7 +99,7 @@ public class ScoreboardUpdater extends BukkitRunnable {
 		scoreName = ChatColor.translateAlternateColorCodes('&', line);
 		score = obj.getScore(scoreName);
 		score.setScore(4);
-		
+
 		score = obj.getScore(" ");
 		score.setScore(3);
 
