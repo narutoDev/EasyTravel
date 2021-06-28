@@ -24,15 +24,15 @@ You install this plugin just like you would install any other.
 ### Waypoints
 You have just finished your new base. Now you want to save the coordinates of it. So you create a private waypoint: <br>
 `/addwaypoint MyNewBase`
-This command creates a new private waypoint with the coordinates you are currently standing on. <br>
+Create a new private waypoint with the coordinates you are currently standing on. <br>
 <br>
 Now you find that the name "MyNewBase" isn't the most original one, so you want to rename your waypoint: <br>
 `/editwaypoint MyNewBase name ABetterName`
-This renames your waypoint "MyNewBase" to "ABetterName". <br>
+Rename your waypoint "MyNewBase" to "ABetterName". <br>
 <br>
 After some serious base renovations the entrance of your base has moved, so you want to change the coordinates stored in your waypoint: <br>
 `/editwaypoint ABetterName position self`
-That changes the coordinates of the waypoint "ABetterName" to where you are currently standing.
+Change the coordinates of the waypoint "ABetterName" to where you are currently standing.
 
 ## To-do
 - Add direction bossbar to travel
