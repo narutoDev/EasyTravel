@@ -59,6 +59,7 @@ public class NewTravelCommand implements CommandExecutor {
 			if (!Main.getPublicManager().existWaypoint(args[1])) {
 				sender.sendMessage(ChatColor.translateAlternateColorCodes('&',
 						"&cWaypoint &r&e" + args[1] + "&r&c doesn't exist!"));
+				return true;
 			}
 			Point3D destination = Utils.waypointToPoint3D(Main.getPublicManager().getWaypoint(args[1]));
 			Point3D start = Utils.locationToPoint3D(p.getLocation());
