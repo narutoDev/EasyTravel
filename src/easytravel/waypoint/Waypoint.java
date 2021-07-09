@@ -30,11 +30,11 @@ public class Waypoint {
 	}
 
 	public static Waypoint fromJSON (JsonObject json, UUID playerID) {
-		int x = json.get("waypoint.loc.x").getAsInt();
-		int y = json.get("waypoint.loc.y").getAsInt();
-		int z = json.get("waypoint.loc.z").getAsInt();
-		World world = Bukkit.getWorld(json.get("waypoint.loc.world").getAsString());
-		String name = json.get("waypoint.name").getAsString();
+		int x = json.get("x").getAsInt();
+		int y = json.get("y").getAsInt();
+		int z = json.get("z").getAsInt();
+		World world = Bukkit.getWorld(json.get("world").getAsString());
+		String name = json.get("name").getAsString();
 		
 		Waypoint wp = new Waypoint(playerID, x, y, z, world, name);
 		return wp;
@@ -43,12 +43,12 @@ public class Waypoint {
 	public static JsonObject toJSON(Waypoint waypoint) {
 		JsonObject object = new JsonObject();
 
-		object.addProperty("waypoint.name", waypoint.waypointName);
+		object.addProperty("name", waypoint.waypointName);
 
-		object.addProperty("waypoint.loc.x", waypoint.point.getX());
-		object.addProperty("waypoint.loc.y", waypoint.point.getY());
-		object.addProperty("waypoint.loc.z", waypoint.point.getZ());
-		object.addProperty("waypoint.loc.world", waypoint.world.getName());
+		object.addProperty("x", waypoint.point.getX());
+		object.addProperty(".y", waypoint.point.getY());
+		object.addProperty("z", waypoint.point.getZ());
+		object.addProperty("world", waypoint.world.getName());
 
 		return object;
 
