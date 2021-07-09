@@ -71,7 +71,13 @@ public class WaypointIO {
 		}
 
 		for (int i = 0; i < array.size(); i++) {
-			Main.getManager().addWaypoint(playerID, Waypoint.fromJSON(array.get(i).getAsJsonObject(), playerID));
+			JsonObject obj = array.get(i).getAsJsonObject();
+			if (!Waypoint.isValidWaypoint(obj)) {
+				System.out.println("Invalid waypoint in " + saveFile.getAbsolutePath());
+				continue;
+			}
+			Main.getManager().addWaypoint(playerID, Waypoint.fromJSON(obj, playerID));
+
 		}
 		Main.LogToConsole("Loaded " + array.size() + " waypoint(s) for " + playerID);
 
@@ -105,6 +111,10 @@ public class WaypointIO {
 
 		for (int i = 0; i < array.size(); i++) {
 			JsonObject currentObject = array.get(i).getAsJsonObject();
+			if (!Waypoint.isValidWaypoint(currentObject) || currentObject.get("uuid") == null) {
+				System.out.println("Invalid waypoint in " + saveFile.getAbsolutePath());
+				continue;
+			}
 			String playerIDString = currentObject.get("uuid").getAsString();
 			UUID playerID = UUID.fromString(playerIDString);
 			Waypoint currentWaypoint = Waypoint.fromJSON(array.get(i).getAsJsonObject(), playerID);

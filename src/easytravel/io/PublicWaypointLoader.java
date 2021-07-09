@@ -43,6 +43,10 @@ public class PublicWaypointLoader implements Runnable {
 
 		for (int i = 0; i < array.size(); i++) {
 			JsonObject currentObject = array.get(i).getAsJsonObject();
+			if (!Waypoint.isValidWaypoint(currentObject) || currentObject.get("uuid") == null) {
+				System.out.println("Invalid waypoint in " + saveFile.getAbsolutePath());
+				continue;
+			}
 			String playerIDString = currentObject.get("uuid").getAsString();
 			UUID playerID = UUID.fromString(playerIDString);
 			Waypoint currentWaypoint = Waypoint.fromJSON(array.get(i).getAsJsonObject(), playerID);

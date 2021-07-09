@@ -29,13 +29,13 @@ public class Waypoint {
 		this.world = world;
 	}
 
-	public static Waypoint fromJSON (JsonObject json, UUID playerID) {
+	public static Waypoint fromJSON(JsonObject json, UUID playerID) {
 		int x = json.get("x").getAsInt();
 		int y = json.get("y").getAsInt();
 		int z = json.get("z").getAsInt();
 		World world = Bukkit.getWorld(json.get("world").getAsString());
 		String name = json.get("name").getAsString();
-		
+
 		Waypoint wp = new Waypoint(playerID, x, y, z, world, name);
 		return wp;
 	}
@@ -52,6 +52,15 @@ public class Waypoint {
 
 		return object;
 
+	}
+
+	public static boolean isValidWaypoint(JsonObject json) {
+		return 
+		json.get("x") != null &&
+		json.get("y") != null &&
+		json.get("z") != null &&
+		json.get("world") != null &&
+		json.get("name") != null;
 	}
 
 	public int getX() {
@@ -89,7 +98,7 @@ public class Waypoint {
 	public String getWaypointName() {
 		return this.waypointName;
 	}
-	
+
 	public void setWaypointName(String waypointName) {
 		this.waypointName = waypointName;
 	}
