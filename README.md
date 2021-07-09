@@ -14,10 +14,10 @@ Because knowing the coordinates of a player gives others a big advantage, most p
 When playing minecraft you often have to travel to specifiy locations. With waypoints you can store the coordinates of these locations and with travelling you can get to them. The travel feature in EasyTravel works like a navy in a car. It tells you how long you still have to travel, how far your destination is and where you have to go. The plugin itself doesn't travel for the players, they still have to walk every block by themselves, the plugin just shows them the fastest route to do so.
 
 ## Installation
-You install this plugin just like you would install any other.
-1. You download the .jar file (download link coming soon)
-2. You drop the .jar file in the plugins folder of your server (the plugin should work on bukkit, spigot and paper)
-3. You restart your sever
+You install this plugin just like you would install any other
+1. Download the .jar file (download link coming soon)
+2. Drop the .jar file in the plugins folder of the server (the plugin should work on bukkit, spigot and paper)
+3. Restart the sever
 4. Read the documentation and enjoy
 
 ## Examples
