@@ -28,6 +28,9 @@ import easytravel.waypoint.PublicWaypointManager;
 import easytravel.waypoint.WaypointManager;
 
 public class Main extends JavaPlugin {
+	
+	// https://bukkit.org/threads/spawn-fake-entities-with-packets.330530/
+	// might be useful in the future
 
 	private static final WaypointManager manager = new WaypointManager();
 	private static final PublicWaypointManager publicManager = new PublicWaypointManager();

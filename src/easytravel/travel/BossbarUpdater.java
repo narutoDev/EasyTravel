@@ -27,7 +27,7 @@ public class BossbarUpdater implements Listener {
 		Main.getPlugin().getServer().getPluginManager().registerEvents(this, Main.getPlugin());
 		bossBar.addPlayer(travel.getTraveler());
 		travel.getTraveler()
-				.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cThe bossbar might be a bit glitchy"));
+				.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cThe bossbar might be glitched"));
 	}
 
 	public void stopUpdater() {
@@ -67,14 +67,8 @@ public class BossbarUpdater implements Listener {
 		y *= 2;
 
 		double yaw = p.getLocation().getYaw();
-		// getYaw apparently returns different ranges Couldn't figure that one out!
-		// https://www.spigotmc.org/threads/player-getlocation-getyaw-giving-strange-results.358027
-		// and
-		// http://www.java2s.com/Tutorial/Java/0120__Development/Normalizesanangletoanabsoluteangle.htm
-		// helped
-		yaw = (yaw %= 360) >= 0 ? yaw : (yaw + 360);
-		// map the yaw from 0-360 to 0-2*y
-		// yaw = (y / 360.0) * yaw; // Not needed somehow No idea why nothing works with this
+		yaw = (yaw % 360 + 360) % 360;
+		p.sendMessage("Yaw=" + yaw);
 
 		// how many percent of y is yaw
 		double progress = Math.abs(yaw / y);
