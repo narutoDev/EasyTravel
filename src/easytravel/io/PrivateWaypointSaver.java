@@ -1,4 +1,4 @@
-package easytravel.util;
+package easytravel.io;
 
 import java.io.File;
 import java.io.FileWriter;

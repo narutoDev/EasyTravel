@@ -7,11 +7,11 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 import easytravel.Main;
+import easytravel.io.PrivateWaypointLoader;
+import easytravel.io.PrivateWaypointSaver;
+import easytravel.io.WaypointIO;
 import easytravel.util.ExtendedBukkitRunnable;
-import easytravel.util.PrivateWaypointLoader;
-import easytravel.util.PrivateWaypointSaver;
 import easytravel.util.ThreadFinishListener;
-import easytravel.util.WaypointIO;
 import net.md_5.bungee.api.ChatColor;
 
 public class PlayerConnectionListener implements Listener {

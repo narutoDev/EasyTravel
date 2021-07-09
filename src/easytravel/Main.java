@@ -21,9 +21,9 @@ import easytravel.command.waypoint.PublicWaypointCommand;
 import easytravel.command.waypoint.PublicWaypointsCommand;
 import easytravel.command.waypoint.WaypointCommand;
 import easytravel.command.waypoint.WaypointsCommand;
+import easytravel.io.WaypointIO;
 import easytravel.listener.PlayerConnectionListener;
 import easytravel.travel.TravelManager;
-import easytravel.util.WaypointIO;
 import easytravel.waypoint.PublicWaypointManager;
 import easytravel.waypoint.WaypointManager;
 
