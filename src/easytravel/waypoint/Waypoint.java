@@ -46,7 +46,7 @@ public class Waypoint {
 		object.addProperty("name", waypoint.waypointName);
 
 		object.addProperty("x", waypoint.point.getX());
-		object.addProperty(".y", waypoint.point.getY());
+		object.addProperty("y", waypoint.point.getY());
 		object.addProperty("z", waypoint.point.getZ());
 		object.addProperty("world", waypoint.world.getName());
 
