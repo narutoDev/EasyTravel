@@ -83,7 +83,7 @@ public class NewTravelCommand implements CommandExecutor {
 			return true;
 
 		}
-		
+
 		// invalid first argument
 		sender.sendMessage(ChatColor.translateAlternateColorCodes('&', Utils.getUsageMessage("NewTravel")));
 		return true;

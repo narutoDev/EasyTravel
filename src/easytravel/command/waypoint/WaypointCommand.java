@@ -47,7 +47,7 @@ public class WaypointCommand implements CommandExecutor {
 }
 
 /*
- * 
+ * Template for new command class
  * @Override public boolean onCommand(CommandSender sender, Command command,
  * String label, String[] args) { return false; }
  */

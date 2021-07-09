@@ -47,7 +47,8 @@ public class PrivateWaypointLoader implements Runnable {
 		JsonArray array = jsonParser.parse(saveFileContent).getAsJsonObject().get("waypoints").getAsJsonArray();
 
 		if (array.size() < 1) {
-			System.out.println("Parsed JSON waypoint array had a length of 0 for file " + saveFile.getAbsolutePath() + "!");
+			System.out.println(
+					"Parsed JSON waypoint array had a length of 0 for file " + saveFile.getAbsolutePath() + "!");
 			return;
 		}
 

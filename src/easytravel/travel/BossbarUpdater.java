@@ -68,7 +68,6 @@ public class BossbarUpdater implements Listener {
 
 		double yaw = p.getLocation().getYaw();
 		yaw = (yaw % 360 + 360) % 360;
-		p.sendMessage("Yaw=" + yaw);
 
 		// how many percent of y is yaw
 		double progress = Math.abs(yaw / y);

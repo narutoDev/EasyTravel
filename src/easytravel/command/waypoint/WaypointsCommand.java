@@ -34,14 +34,13 @@ public class WaypointsCommand implements CommandExecutor {
 			return true;
 		}
 
-		String maxNumber;
+		String maxNumber = "∞";
+		// As long as there is no real config file, this statement will get removed while building
 		if (Settings.MAX_PRIVATE_WAYPOINTS_PER_PLAYER > -1) {
 			maxNumber = Settings.MAX_PRIVATE_WAYPOINTS_PER_PLAYER + "";
-		} else {
-			maxNumber = "∞";
 		}
-		String message = "&7 You have &r&9" + amount + " / &r&9" + maxNumber
-				+ "&r&7 Waypoints:";
+		
+		String message = "&7 You have &r&9" + amount + " / &r&9" + maxNumber + "&r&7 Waypoints:";
 		sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
 
 		for (Waypoint w : Main.getManager().getAllWaypoints(p.getUniqueId())) {

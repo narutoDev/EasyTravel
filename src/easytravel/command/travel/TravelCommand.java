@@ -31,10 +31,9 @@ public class TravelCommand implements CommandExecutor {
 			return true;
 
 		}
-		
+
 		if (!Main.getTravelManager().hasTravel(p.getUniqueId())) {
-			p.sendMessage(
-					ChatColor.translateAlternateColorCodes('&', "&cYou currently aren't travelling anywhere!"));
+			p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cYou currently aren't travelling anywhere!"));
 			return true;
 		}
 
