@@ -58,8 +58,7 @@ public class EditWaypointCommand implements CommandExecutor {
 
 		case ("position"):
 			if (args.length < 3) {
-				sender.sendMessage(ChatColor.translateAlternateColorCodes('&',
-						"&cUsage: /editwaypoint [name | position] [name of the waypoint to edit] [new waypoint name | <x> <y> <z> or \"self\" to set the position to your current location]"));
+				sender.sendMessage(ChatColor.translateAlternateColorCodes('&', Utils.getUsageMessage("EditWaypoint")));
 				return true;
 			}
 			Waypoint wpToEdit = Main.getManager().getWaypoint(p.getUniqueId(), args[1]);
@@ -89,8 +88,7 @@ public class EditWaypointCommand implements CommandExecutor {
 		}
 
 		// Invalid edit mode was given
-		sender.sendMessage(ChatColor.translateAlternateColorCodes('&',
-				"&cUsage: /editwaypoint [name | position] [name of the waypoint to edit] [new waypoint name | <x> <y> <z> or \"self\" to set the position to your current location]"));
+		sender.sendMessage(ChatColor.translateAlternateColorCodes('&', Utils.getUsageMessage("EditWaypoint")));
 		return true;
 
 	}

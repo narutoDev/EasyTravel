@@ -72,6 +72,7 @@ public class AddPublicWaypointCommand implements CommandExecutor {
 			return true;
 		}
 
+		// name of the waypoint doesn't meet requirements
 		if (!Utils.isValidName(args[0])) {
 			sender.sendMessage(ChatColor.translateAlternateColorCodes('&',
 					"&cInvalid waypoint name! Can only contain letters, - and _! It can be between 3 and 16 characters long!"));
@@ -82,14 +83,17 @@ public class AddPublicWaypointCommand implements CommandExecutor {
 		int y;
 		int z;
 
+		// create the waypoint where the player is currently standing
 		if (args.length == 1) {
 			x = p.getLocation().getBlockX();
 			y = p.getLocation().getBlockY();
 			z = p.getLocation().getBlockZ();
+		// player has specified coordinates with the arguments
 		} else if (Utils.isInt(args[1]) && Utils.isInt(args[2]) && Utils.isInt(args[3])) {
 			x = Integer.parseInt(args[1]);
 			y = Integer.parseInt(args[2]);
 			z = Integer.parseInt(args[3]);
+		// invalid inputs
 		} else {
 			sender.sendMessage(ChatColor.translateAlternateColorCodes('&',
 					"&cPlease enter normal numbers like 0, 3, -8 as coordinates!"));
