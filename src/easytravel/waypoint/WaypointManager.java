@@ -87,7 +87,6 @@ public class WaypointManager {
 		playerMap.remove(waypointName);
 		wp.setWaypointName(newWaypointName);
 		playerMap.put(newWaypointName, wp);
-		
 
 	}
 

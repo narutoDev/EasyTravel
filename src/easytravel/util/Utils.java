@@ -83,7 +83,7 @@ public class Utils {
 	// 0 = private waypoint
 	// 1 = public waypoint
 	// 2 = player
-	public static final String[] modeNames = { "&3privatewaypoint", "&3publicwaypoint", "&3player"};
+	public static final String[] modeNames = { "&3privatewaypoint", "&3publicwaypoint", "&3player" };
 
 	public static String getDestinationName(String destination, int mode) {
 		return modeNames[mode] + "&r&6&l " + destination;
@@ -92,7 +92,7 @@ public class Utils {
 	public static Point3D waypointToPoint3D(Waypoint wp) {
 		return new Point3D(wp.getX(), wp.getY(), wp.getZ());
 	}
-	
+
 	public static Point3D locationToPoint3D(Location loc) {
 		return new Point3D(loc.getBlockX(), loc.getBlockY(), loc.getBlockZ());
 	}
