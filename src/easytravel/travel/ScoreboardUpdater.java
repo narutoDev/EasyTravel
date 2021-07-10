@@ -19,7 +19,7 @@ public class ScoreboardUpdater extends BukkitRunnable {
 	private Travel travel;
 	private long travelStarted = System.currentTimeMillis();
 
-	// Only recalculate things when the player has moved
+	// cache previously calculated values
 	private Location lastLocationCalculated;
 	private int totalDistance;
 	private int distanceLeft;
