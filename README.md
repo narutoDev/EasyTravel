@@ -21,7 +21,7 @@ You install this plugin just like you would install any other
 4. Read the documentation and enjoy
 
 ## Examples
-### Waypoints
+### Private Waypoints
 You have just finished your new base. Now you want to save the coordinates of it. So you create a private waypoint: <br>
 `/addwaypoint MyNewBase`
 Create a new private waypoint with the coordinates you are currently standing on. <br>
@@ -35,7 +35,8 @@ After some serious base renovations the entrance of your base has moved, so you 
 Change the coordinates of the waypoint "ABetterName" to where you are currently standing.
 
 ## To-do
-- Add direction bossbar to travel
+- Add direction bossbar to travel (mostly finished, still a bit glitchy)
+- Improve visibility of waypoints in close distance (beacon beam, glowing entities)
 - Expand README and documentation
 - Add player friend system
 - Allow player as travel destination
