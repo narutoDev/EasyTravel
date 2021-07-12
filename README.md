@@ -42,4 +42,5 @@ Change the coordinates of the waypoint "ABetterName" to where you are currently 
 - Allow player as travel destination
 - Add config file
 - Clean-up command code
+- Add auto-updater
 - Set up a spigot plugin page
